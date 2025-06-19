@@ -54,10 +54,24 @@ HTTPS+账号密码(pass away）
 Settings->Developer Settings->Personal access tokens->Fine-grained tokens->Generate new token
 SSH+密匙:
 1、git remote add <远程仓库别名>不加远程仓库地址
-2、ssh-keygen -t rsa -C 邮箱
+2、ssh-keygen -t rsa -C 邮箱      ssh-keygen -t ed25519 -C "your_email@example.com"
 3、public key has been saved in 目录id_rsa.pub
 4、复制id_rsa.pub
 5、Settings->SSH and GPG keys-> New SSH key
+
+ps:使用 SSH 替代 HTTPS
+# 1. 生成 SSH 密钥（如果还没有）
+ssh-keygen -t ed25519 -C "your_email@example.com"
+
+# 2. 将公钥添加到 GitHub
+cat ~/.ssh/id_ed25519.pub
+# 复制输出内容到 GitHub Settings > SSH and GPG keys
+
+# 3. 修改远程 URL 为 SSH 格式
+git remote set-url learngit git@github.com:Astroxleduo/learngit.git
+
+# 4. 再次尝试推送
+git push --set-upstream learngit leduo
 
 
 个人大致使用流程：
