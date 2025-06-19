@@ -1,0 +1,40 @@
+1、初始化一个新仓库
+git init
+
+2、配置用户信息
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+
+3、添加文件到暂存区
+git add 文件名
+
+4.提交更改
+git commit -m "提交描述"
+
+5、查看提交历史
+git log
+git log --stat
+
+6、通过commit_id查看修改内容
+git diff commit_id
+
+7、代码回溯
+git reset --hard [commit id]	第一个是当前分支回退到指定位置，会丢弃后面提交。
+git checkout [commit id]	第二个是签出一个新分支
+
+8、查看当前项目里有哪些分支
+git branch
+
+9、创建分支
+git checkout -b 分支名
+
+10、切换分支
+git checkout 分支名
+
+11、合并分支
+git merge 被合并的分支名
+
+12、把远程git仓库克隆到本地
+git clone 远程仓库地址
+13、把一个远程仓库绑定到本地仓库
+git remote add <远程仓库别名> <远程仓库地址>
