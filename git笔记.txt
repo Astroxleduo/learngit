@@ -53,7 +53,7 @@ HTTPS+账号密码(pass away）
 用户名+PAT令牌:
 Settings->Developer Settings->Personal access tokens->Fine-grained tokens->Generate new token
 SSH+密匙:
-1、git remote add <远程仓库别名>不加远程仓库地址
+1、git remote add <远程仓库别名>  ssh的地址
 2、ssh-keygen -t rsa -C 邮箱      ssh-keygen -t ed25519 -C "your_email@example.com"
 3、public key has been saved in 目录id_rsa.pub
 4、复制id_rsa.pub
