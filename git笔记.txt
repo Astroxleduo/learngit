@@ -40,10 +40,15 @@ git clone 远程仓库地址
 13、把一个远程仓库绑定到本地仓库
 git remote add <远程仓库别名> <远程仓库地址>
 
-14、把编写的本地代码，推送到github
-git push 远程仓库别名 代码分支
+14、把编写的本地代码，推送到远程仓库
+git push 远程仓库别名 远程仓库代码分支
+git push 把代码上传到默认远程仓库中和本地分支对应的分支里
 
-15、登录并校验权限
+15、把远程代码，下载到本地
+git pull 把默认远程仓库中对应分支的最新代码拉取下来
+git pull 远程仓库别名 远程仓库代码分支
+
+16、登录并校验权限
 HTTPS+账号密码(pass away）
 用户名+PAT令牌:
 Settings->Developer Settings->Personal access tokens->Fine-grained tokens->Generate new token
@@ -54,3 +59,23 @@ SSH+密匙:
 4、复制id_rsa.pub
 5、Settings->SSH and GPG keys-> New SSH key
 
+
+个人大致使用流程：
+
+创建绑定仓库->切换到develop分支->编写代码->执行git add * 暂存
+->执行git commit 提交->切换回master分支->执行git merge 合并代码
+->执行git push 推送
+
+-每次修改留下记录
+-随时查看修改内容
+-随时切回旧版本代码
+-保存多份 代码安全
+
+多人：
+切换到develop->创建并切换到功能分支->完成开发-> add、commit提交代码
+->切换回develop-> git pull 拉取代码->合并dianzan代码到develop
+->上传合并完的代码到github develop分支
+
+
+尝试推荐的app：
+obs，xmanager，kazumi，saduck，let me cook
