@@ -36,5 +36,21 @@ git merge 被合并的分支名
 
 12、把远程git仓库克隆到本地
 git clone 远程仓库地址
+
 13、把一个远程仓库绑定到本地仓库
 git remote add <远程仓库别名> <远程仓库地址>
+
+14、把编写的本地代码，推送到github
+git push 远程仓库别名 代码分支
+
+15、登录并校验权限
+HTTPS+账号密码(pass away）
+用户名+PAT令牌:
+Settings->Developer Settings->Personal access tokens->Fine-grained tokens->Generate new token
+SSH+密匙:
+1、git remote add <远程仓库别名>不加远程仓库地址
+2、ssh-keygen -t rsa -C 邮箱
+3、public key has been saved in 目录id_rsa.pub
+4、复制id_rsa.pub
+5、Settings->SSH and GPG keys-> New SSH key
+
